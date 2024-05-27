@@ -6,7 +6,7 @@ show_cpu_mem() {
   index=$1
   icon="$(get_tmux_option "@catppuccin_cpu_mem_icon" "󰍛")"
   color="$(get_tmux_option "@catppuccin_cpu_mem_color" "$thm_green")"
-  text="$(get_tmux_option "@catppuccin_cpu_mem__text" "#($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load --cpu-mode 2 --averages-count 0 --interval 2)")"
+  text="$(get_tmux_option "@catppuccin_cpu_mem__text" "#($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load --cpu-mode 2 --graph-lines 0 --averages-count 0 --interval 2)")"
 
   module=$(build_status_module "$index" "$icon" "$color" "$text")
 
